@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@HazeBlue的个人网页</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #7F00FF, #E100FF, #FF007F);
+            color: #fff;
+            overflow-x: hidden;
+            animation: colorChange 10s infinite alternate;
+        }
+        @keyframes colorChange {
+            0% { background: linear-gradient(to bottom right, #7F00FF, #E100FF, #FF007F); }
+            100% { background: linear-gradient(to bottom right, #FF007F, #E100FF, #7F00FF); }
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+            background-color: rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 20px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .contact {
+            margin-top: 30px;
+        }
+        .contact h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        .contact p {
+            font-size: 20px;
+            margin: 5px 0;
+        }
+        .interesting-fact {
+            margin-top: 30px;
+        }
+        .interesting-fact p {
+            font-size: 20px;
+            font-style: italic;
+        }
+        .button {
+            display: inline-block;
+            padding: 20px 40px;
+            background-color: #FF3E4D;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+            font-size: 24px;
+            margin-top: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+            outline: none;
+        }
+        .button:hover {
+            background-color: #FF1B2D;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>👋 <span class="animated-text">嗨，我是@HazeBlue！</span></h1>
+        <p>我对人工智能充满热情，喜欢关注与人工智能相关的故事。</p>
+        <p>目前，我正在学习如何使用 AI 来编写反映我自己的想法和创造力的内容。</p>
+        <p>虽然我最喜欢独立工作，但我愿意在涉及人工智能的项目上进行合作。</p>
+
+        <div class="contact">
+            <h2>📫 您可以通过以下电子邮件联系我：</h2>
+            <p>谷歌：<a href="mailto:mrhazeblue@gmail.com">mrhazeblue@gmail.com</a></p>
+            <p>微软：<a href="mailto:Mr.hazeblue@outlook.com">Mr.hazeblue@outlook.com</a></p>
+            <p>质子：<a href="mailto:Mrhazeblue@proton.me">Mrhazeblue@proton.me</a></p>
+        </div>
+
+        <div class="interesting-fact">
+            <p>⚡ 有趣的事实：您是否知道人工智能的概念已经存在了几十年，但最近的进步使其比以往任何时候都更容易使用和强大？</p>
+        </div>
+
+        <button class="button" id="changeColorButton">改变背景颜色</button>
+    </div>
+
+    <script>
+        document.getElementById("changeColorButton").addEventListener("click", function() {
+            document.body.style.background = "linear-gradient(to bottom right, #" + getRandomColor() + ", #" + getRandomColor() + ", #" + getRandomColor() + ")";
+        });
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+</body>
+</html>
